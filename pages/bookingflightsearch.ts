@@ -1,5 +1,5 @@
 import { expect, type Locator, type Page } from '@playwright/test';
-import { Date } from '../utils/date';
+import { DateUtils } from '../utils/date';
 
 export class BookingFlightSearch {
     
@@ -72,7 +72,7 @@ export class BookingFlightSearch {
    */
   async selectFirstNextMonth() {
     await this.dateInput.click();
-    await this.page.locator('//span[@data-date="' + Date.calculateFirstNextMonth() + '"]').click();
+    await this.page.locator('//span[@data-date="' + new DateUtils().calculateFirstNextMonth() + '"]').click();
   }
 
   /**

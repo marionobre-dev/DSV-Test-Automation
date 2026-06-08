@@ -1,4 +1,4 @@
-export class BookingFlightSearch {
+export class DateUtils {
 
   /**
    * Calculation for the first day of next month
